@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GameVault – Home</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">GAME<span>VAULT</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="store.html">Store</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="deals.html">Deals</a></li>
+      <li><a href="account.html">Account</a></li>
+      <li><a href="cart.html">Cart</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Welcome to <span>GameVault</span></h1>
+    <p>Buy. Play. Repeat. Discover the best games of 2025.</p>
+    <a href="store.html" class="btn">Browse Store</a>
+  </header>
+
+  <!-- Featured Games -->
+  <section class="featured">
+    <h2>🔥 Trending Games</h2>
+    <div class="game-cards">
+
+      <!-- Game 1 -->
+      <div class="card">
+        <img src="images/gta6.jpg" alt="GTA VI">
+        <h3>GTA VI</h3>
+        <p class="price">$79.99</p>
+        <p>Crime, chaos, and open-world madness.</p>
+        <button class="btn-cart" onclick="addToCart('GTA VI', 79.99)">Add to Cart</button>
+      </div>
+
+      <!-- Game 2 -->
+      <div class="card">
+        <img src="images/fifa25.jpg" alt="FIFA 25">
+        <h3>FIFA 25</h3>
+        <p class="price">$69.99</p>
+        <p>The next-gen football experience.</p>
+        <button class="btn-cart" onclick="addToCart('FIFA 25', 69.99)">Add to Cart</button>
+      </div>
+
+      <!-- Game 3 -->
+      <div class="card">
+        <img src="images/hogwarts.jpg" alt="Hogwarts Legacy">
+        <h3>Hogwarts Legacy</h3>
+        <p class="price">$54.99</p>
+        <p>Live your wizarding fantasy at Hogwarts.</p>
+        <button class="btn-cart" onclick="addToCart('Hogwarts Legacy', 54.99)">Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Contact</a>
+      <a href="#">Support</a>
+      <a href="#">Privacy</a>
+    </div>
+    <p>&copy; 2025 GameVault – All Rights Reserved</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="scripts/script.js"></script>
+
+</body>
+</html>

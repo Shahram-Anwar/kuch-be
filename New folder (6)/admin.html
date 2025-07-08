@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel – GameVault</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <style>
+    .admin-panel {
+      max-width: 600px;
+      margin: 80px auto;
+      background-color: #1a273b;
+      padding: 30px;
+      border-radius: 10px;
+      display: none;
+    }
+
+    .admin-panel h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: none;
+      background-color: #2a384e;
+      color: #fff;
+    }
+
+    input[type="file"] {
+      background: none;
+    }
+
+    button.upload-btn {
+      margin-top: 20px;
+      width: 100%;
+      background-color: #ff4655;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .upload-btn:hover {
+      background-color: #e63b48;
+    }
+
+    .error {
+      color: red;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="admin-panel" id="adminPanel">
+    <h2>Upload New Game</h2>
+    <form id="uploadForm">
+      <label>Game Title:</label>
+      <input type="text" placeholder="Enter game name" required />
+
+      <label>Description:</label>
+      <textarea placeholder="Enter game description" required></textarea>
+
+      <label>Cover Image:</label>
+      <input type="file" accept="image/*" required />
+
+      <label>Game File:</label>
+      <input type="file" required />
+
+      <button type="submit" class="upload-btn">Upload Game</button>
+    </form>
+  </div>
+
+  <div class="error" id="errorMsg"></div>
+
+  <script>
+    const correctPassword = "admin123"; // Change this to your secret password
+
+    window.onload = () => {
+      const pass = prompt("Enter admin password:");
+      if (pass === correctPassword) {
+        document.getElementById("adminPanel").style.display = "block";
+      } else {
+        document.getElementById("errorMsg").innerText = "Access Denied";
+      }
+    };
+
+    // Handle dummy upload (no real backend here)
+    document.getElementById("uploadForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Game uploaded successfully! (not really — no backend yet)");
+    });
+  </script>
+  <script src="scripts/admin.js"></script>
+
+  
+
+
+</body>
+</html>

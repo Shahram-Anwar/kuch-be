@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Account – GameVault</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <style>
+    .auth-container {
+      max-width: 450px;
+      margin: 80px auto;
+      background-color: #1a273b;
+      padding: 30px;
+      border-radius: 12px;
+      color: #fff;
+    }
+
+    .tab-buttons {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+
+    .tab-buttons button {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 18px;
+      padding: 10px;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+    }
+
+    .tab-buttons button.active {
+      border-bottom: 2px solid #ff4655;
+    }
+
+    form {
+      display: none;
+      flex-direction: column;
+    }
+
+    form.active {
+      display: flex;
+    }
+
+    input {
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: none;
+      background-color: #2a384e;
+      color: #fff;
+    }
+
+    .btn-submit {
+      background-color: #ff4655;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn-submit:hover {
+      background-color: #e63b48;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">GAME<span>VAULT</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="store.html">Store</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="deals.html">Deals</a></li>
+      <li><a href="account.html">Account</a></li>
+      <li><a href="cart.html">Cart</a></li>
+    </ul>
+  </nav>
+
+  <!-- Login/Signup Form -->
+  <div class="auth-container">
+    <div class="tab-buttons">
+      <button class="tab-btn active" onclick="switchForm('login')">Login</button>
+      <button class="tab-btn" onclick="switchForm('signup')">Sign Up</button>
+    </div>
+
+    <form id="loginForm" class="active">
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit" class="btn-submit">Login</button>
+    </form>
+
+    <form id="signupForm">
+      <input type="text" placeholder="Username" required />
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <input type="password" placeholder="Confirm Password" required />
+      <button type="submit" class="btn-submit">Create Account</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Contact</a>
+      <a href="#">Support</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+    <p>&copy; 2025 GameVault – All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function switchForm(formType) {
+      document.getElementById("loginForm").classList.remove("active");
+      document.getElementById("signupForm").classList.remove("active");
+      document.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
+
+      if (formType === "login") {
+        document.getElementById("loginForm").classList.add("active");
+        document.querySelector(".tab-buttons button:nth-child(1)").classList.add("active");
+      } else {
+        document.getElementById("signupForm").classList.add("active");
+        document.querySelector(".tab-buttons button:nth-child(2)").classList.add("active");
+      }
+    }
+
+    // Prevent form from submitting (no backend yet)
+    document.getElementById("loginForm").addEventListener("submit", e => {
+      e.preventDefault();
+      alert("Login clicked (no backend yet)");
+    });
+
+    document.getElementById("signupForm").addEventListener("submit", e => {
+      e.preventDefault();
+      alert("Signup clicked (no backend yet)");
+    });
+  </script>
+
+</body>
+</html>

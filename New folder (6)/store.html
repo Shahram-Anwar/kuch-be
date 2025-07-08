@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Store – GameVault</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">GAME<span>VAULT</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="store.html">Store</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="deals.html">Deals</a></li>
+      <li><a href="account.html">Account</a></li>
+      <li><a href="cart.html">Cart</a></li>
+    </ul>
+  </nav>
+
+  <!-- Store Page Title -->
+  <header style="padding: 60px 20px; text-align: center;">
+    <h1>Explore All Games</h1>
+    <p>Browse through our entire collection of titles available on GameVault.</p>
+  </header>
+
+  <!-- Game Grid -->
+  <section class="featured">
+    <div class="game-cards">
+
+      <!-- Game 1 -->
+      <div class="card">
+        <img src="images/minecraft.jpg" alt="Minecraft">
+        <h3>Minecraft</h3>
+        <p class="price">$29.99</p>
+        <p>Survive, build, and explore endlessly.</p>
+        <button class="btn-cart" onclick="addToCart('Minecraft', 29.99)">Add to Cart</button>
+      </div>
+
+      <!-- Game 2 -->
+      <div class="card">
+        <img src="images/cyberpunk.jpg" alt="Cyberpunk 2077">
+        <h3>Cyberpunk 2077</h3>
+        <p class="price">$59.99</p>
+        <p>Futuristic open-world RPG with intense action.</p>
+        <button class="btn-cart" onclick="addToCart('Cyberpunk 2077', 59.99)">Add to Cart</button>
+      </div>
+
+      <!-- Game 3 -->
+      <div class="card">
+        <img src="images/eldenring.jpg" alt="Elden Ring">
+        <h3>Elden Ring</h3>
+        <p class="price">$49.99</p>
+        <p>Explore a vast dark fantasy world by FromSoftware.</p>
+        <button class="btn-cart" onclick="addToCart('Elden Ring', 49.99)">Add to Cart</button>
+      </div>
+
+      <!-- Game 4 -->
+      <div class="card">
+        <img src="images/fifa25.jpg" alt="FIFA 25">
+        <h3>FIFA 25</h3>
+        <p class="price">$69.99</p>
+        <p>The next-gen football experience.</p>
+        <button class="btn-cart" onclick="addToCart('FIFA 25', 69.99)">Add to Cart</button>
+      </div>
+
+      <!-- Game 5 -->
+      <div class="card">
+        <img src="images/gta6.jpg" alt="GTA VI">
+        <h3>Grand Theft Auto VI</h3>
+        <p class="price">$79.99</p>
+        <p>Crime, chaos, and open-world madness.</p>
+        <button class="btn-cart" onclick="addToCart('GTA VI', 79.99)">Add to Cart</button>
+      </div>
+
+      <!-- Game 6 -->
+      <div class="card">
+        <img src="images/hogwarts.jpg" alt="Hogwarts Legacy">
+        <h3>Hogwarts Legacy</h3>
+        <p class="price">$54.99</p>
+        <p>Become a wizard in the Harry Potter universe.</p>
+        <button class="btn-cart" onclick="addToCart('Hogwarts Legacy', 54.99)">Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Contact</a>
+      <a href="#">Support</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+    <p>&copy; 2025 GameVault – All Rights Reserved</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="scripts/script.js"></script>
+
+</body>
+</html>
